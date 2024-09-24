@@ -16,7 +16,7 @@ function App() {
   ]
   
 )
-function addfunction(){
+const addfunction =()=> {
   setTodos([...todos, {
     title:" market",
     description:" bring vegetables, fruit"
@@ -25,10 +25,15 @@ function addfunction(){
 }
 
   return (
-    <>
-  
-  <button onClick={ addfunction} > Add todos</button>
-  </>
+    <div>
+   <h1>
+   Title: {title}
+   </h1>
+   <h5>
+    Description: {description}
+   </h5>
+   <button onClick={ addfunction} > Add todos</button>
+  </div>
      )
       }
  
