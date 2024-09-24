@@ -21,24 +21,16 @@ function addfunction(){
     title:" market",
     description:" bring vegetables, fruit"
   }
-]);
+])
 }
 
   return (
     <>
-  <Buttoncomponent title={ title} description={description}/>
+  
   <button onClick={ addfunction} > Add todos</button>
   </>
      )
       }
-  function Buttoncomponent({title, description}){
-    return(
-      <>
-     <h1>{title}</h1>
-     <h5> {description}</h5>
-      </>
-    )
-
-  }
+ 
 
 export default App
