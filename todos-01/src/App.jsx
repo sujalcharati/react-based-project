@@ -16,20 +16,19 @@ function App() {
   ]
   
 )
+function addfunction(){
+  setTodos([...todos, {
+    title:" market",
+    description:" bring vegetables, fruit"
+  }
+]);
+}
 
   return (
     <>
-  <Buttoncomponent/>
-  <button onClick={()=>{
-    setTodos([...todos, {
-      title:" market",
-      description:" bring vegetables, fruit"
-    }
-  ]);
-  }} title={title} description={description}> Add todos</button>
-  
-
-    </>
+  <Buttoncomponent title={ title} description={description}/>
+  <button onClick={ addfunction} > Add todos</button>
+  </>
      )
       }
   function Buttoncomponent({title, description}){
