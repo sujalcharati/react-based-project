@@ -26,16 +26,22 @@ const addfunction =()=> {
 
   return (
     <div>
-   <h1>
-   Title: {title}
-   </h1>
-   <h5>
-    Description: {description}
-   </h5>
+ 
    <button onClick={ addfunction} > Add todos</button>
-  </div>
+   <Displaytodo title={title} description={ description}/>
+  </div> 
      )
-      }
+}
+ 
+function Displaytodo({title,description}){
+return(
+  <div>
+    <h1>title:{ title}</h1>
+    <h5>description: { description}</h5>
+  </div>
+
+)
+}
  
 
 export default App
