@@ -5,43 +5,58 @@ import './App.css'
 function App() {
   const [todos, setTodos] = useState([{
 
-    title:"study",
-    description:" go through some command line..."
+    title: "study",
+    description: " go through some command line..."
   },
   {
 
-    title:" time pass",
-    description:" play chess ..."
+    title: " time pass",
+    description: " play chess ..."
   }
   ]
-  
-)
-const addfunction =()=> {
-  setTodos([...todos, {
-    title:" market",
-    description:" bring vegetables, fruit"
+
+  )
+  const addfunction = () => {
+    setTodos([...todos, {
+      title: " market",
+      description: " bring vegetables, fruit"
+    }
+    ])
   }
-])
-}
 
   return (
     <div>
- 
-   <button onClick={ addfunction} > Add todos</button>
-   <Displaytodo title={title} description={ description}/>
-  </div> 
-     )
-}
- 
-function Displaytodo({title,description}){
-return(
-  <div>
-    <h1>title:{ title}</h1>
-    <h5>description: { description}</h5>
-  </div>
 
-)
+      <button onClick={addfunction}> Add todos</button>
+      <Displaytodo />
+    </div>
+  )
 }
- 
+
+function Displaytodo({ title, description }) {
+  return (
+    <div>
+      <div>
+
+        <input
+          type='text'
+          placeholder='title'>
+      
+        </input>
+      </div>
+      <div>
+
+        <input
+          type='text'
+          placeholder='description'>
+
+        </input>
+      </div>
+             <button>submit </button>
+    </div>
+
+  )
+}
+
 
 export default App
