@@ -1,7 +1,11 @@
 import { RecoilRoot, useRecoilValue } from 'recoil'
 import './App.css'
+import { useState } from 'react'
 
 function App() {
+  const addTodo =()=>{
+    
+  }
    return (
     <RecoilRoot>
       <div>
@@ -12,23 +16,33 @@ function App() {
 }
 
 function Button(){
-  const storetodos = useRecoilValue(todoatom);
+  const [title,setTitle] = useState([]);
+  const [description,setDescription] = useState([]);
+
+
+  // const storetodos = useRecoilValue(todoatom);
   return (
     <div>
       <div>
         <input
          type='text'
-         placeholder='title'/>
+         placeholder='title'
+         value={ title}
+         onChange={(e)=>{
+          setTitle(e.target.value)
+         }}/>
        </div>
-      <div>
+     <div>
         <input
          type='text'
-         placeholder='description'/>
-        </div>
+         placeholder='description'
+         value={description}
+         onChange={(e)=>{
+          setDescription(e.target.value)
+         }}/>
+    </div>
 
-        <button onClick={()=>{
-        
-        }}>submit</button>
+        <button onClick={ addTodo }>Add todo </button>
     </div>
   )
 }
