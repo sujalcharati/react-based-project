@@ -1,26 +1,29 @@
-import { RecoilRoot, useRecoilValue } from 'recoil'
+import { RecoilRoot, useRecoilState, useRecoilValue } from 'recoil'
 import './App.css'
 import { useState } from 'react'
+import { filteratom } from './Todo/atoms/Todos';
 
 function App() {
+  const [todo,setTodo]= useRecoilState(todoatom);
   const addTodo =()=>{
-    
+     setTodo([...todo,{}]);
+     setTitle('');
+     setDescription('');
   }
    return (
     <RecoilRoot>
       <div>
-        <Button/>
+        <TodoButton/>
+        <Filterbutton/>
       </div>
     </RecoilRoot>
    )
 }
 
-function Button(){
+function TodoButton(){
   const [title,setTitle] = useState([]);
   const [description,setDescription] = useState([]);
 
-
-  // const storetodos = useRecoilValue(todoatom);
   return (
     <div>
       <div>
@@ -46,5 +49,15 @@ function Button(){
     </div>
   )
 }
+ function Filterbutton(){
+const [filter,setFilter]= useRecoilState(filteratom);
+  return (
+    <input
+    placeholder='filter'
+    value={filter}
+    type='text'
+    onChange/>
+  )
+ }
 
 export default App
