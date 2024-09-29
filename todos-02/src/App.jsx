@@ -10,6 +10,7 @@ function App() {
      setTitle('');
      setDescription('');
   }
+
    return (
     <RecoilRoot>
       <div>
@@ -56,7 +57,9 @@ const [filter,setFilter]= useRecoilState(filteratom);
     placeholder='filter'
     value={filter}
     type='text'
-    onChange/>
+    onChange={(e)=>{
+      setFilter(e.target.value);
+    }}/>
   )
  }
 

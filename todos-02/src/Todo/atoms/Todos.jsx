@@ -10,9 +10,11 @@ export const filteratom = atom({
     default:[]
 });
  
-export const filteredlist = selector({
+export const filteredtodos = selector({
     key:" filteredlist",
     get: ({ get})=>{
-        
+        const todos= get(todoatom);
+        const filter = get(todofilter);
+        return todos.filter(x=> x.title.includes( filter)|| x.description.includes( filter));
     }
 })
