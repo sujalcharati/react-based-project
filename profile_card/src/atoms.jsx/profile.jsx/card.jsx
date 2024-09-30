@@ -1,16 +1,16 @@
 import { atom } from "recoil";
 
-const followersatom = atom({
+export const followersatom = atom({
     key: "followersatom",
     default :"80k"
 });
 
-const likesatom = atom({
+export const likesatom = atom({
     key: "likesatom",
     default :"803k"
 });
 
-const photosatom = atom({
+export const photosatom = atom({
     key: "photosatom",
     default :"1.4k"
 });
