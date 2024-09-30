@@ -74,6 +74,26 @@ function App() {
         <div style={{ paddingRight: '30px' }}>{likes}</div>
         <div>{photos}</div>
       </div>
+      <div>
+
+      <img src='https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png' style={{
+         borderRadius: '500px',
+         height: '34px',
+      }}/>
+      <img src='https://t4.ftcdn.net/jpg/05/48/51/53/240_F_548515332_izhrnn846zEYhqLJZxQK5kxuZDdUVAov.jpg' style={{
+         borderRadius: '500px',
+         height: '34px',
+      }}/>
+      <img src='https://imgs.search.brave.com/xF_BwBz-bpV5b0nhz_Od9qtC1iJ84jzayiOAH_pBJ54/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L2VU/dEZ1VmVLVHdxVEQ0/MlBZTUxXdUEtMzIw/LTgwLmpwZw' style={{
+         borderRadius: '500px',
+         height: '34px',
+      }}/>
+      <img src='https://imgs.search.brave.com/haOrmK6hj5Kj73lwxYUeIcUmu5JLOFYX3dS5gyZn5rQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1LzMyLzIwLzAz/LzM2MF9GXzUzMjIw/MDM4Ml9LTDZDRGFa/Y3VzaVpPOW5PNVRE/N2hXUUV6OEtvNkJa/Qi5qcGc' style={{
+         borderRadius: '500px',
+         height: '34px',
+      }}/>
+
+      </div>
     </div>
   )
 }
