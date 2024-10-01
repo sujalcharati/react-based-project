@@ -40,26 +40,18 @@ function Buttoncomponents(){
    }
   return(
     <div>
-      
-  <div style={{backgroundColor: color, height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center',padding: '10px 20px', fontSize: '16px'}}>
-    
-    {/* <div style={ { display:'flex',
-      justifyContent:'center',
-      alignItems:'center',
-       borderRadius:'9px',
-      padding: '10px 20px',
-       fontSize: '16px'
-       }}> */}
-    <button onClick={redcolor} style={{background:'red' }}>Red </button>
-    <button onClick={yellowcolor}style={{background:'yellow'}}>Yellow </button>
-    <button onClick={bluecolor}style={{background:'blue'}}>Blue </button>
-    <button onClick={pinkcolor}style={{ background:'pink'}}>pink </button>
-    <button onClick={greencolor}style={{background:'green'}}>Green </button>
-    <button onClick={blackcolor}style={{background:'black',color:'white'}}>Black </button>
-    <button onClick={defaultcolor}style={{background:'default'}}>default </button>
-  </div>
-  </div>
-    // </div>
+      <div style={{backgroundColor: color, height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '10px 20px', fontSize: '16px', borderRadius:'9px'}}>
+        
+
+        <button onClick={redcolor} style={{background: 'red', paddingRight: '9px', margin: '0 5px',}}>Red</button>
+        <button onClick={yellowcolor} style={{background: 'yellow', margin: '0 5px'}}>Yellow</button>
+        <button onClick={bluecolor} style={{background: 'blue', margin: '0 15px'}}>Blue</button>
+        <button onClick={pinkcolor} style={{background: 'pink', margin: '0 5px'}}>Pink</button>
+        <button onClick={greencolor} style={{background: 'green', margin: '0 5px'}}>Green</button>
+        <button onClick={blackcolor} style={{background: 'black', color: 'white', margin: '0 5px'}}>Black</button>
+        <button onClick={defaultcolor} style={{background: 'default', margin: '0 5px'}}>Default</button>
+      </div>
+    </div>
   )
 }
 
@@ -70,32 +62,3 @@ function Buttoncomponents(){
 
 
 export default App
-
-// import { useState, useEffect } from 'react'
-
-// import './App.css'
-
-// function App() {
-//   const [color, setColor] = useState('')
-
-//   useEffect(() => {
-//     document.body.style.background = color;
-//   }, [color])
-  
-//   const changeBG = (e) => {
-//     setColor(e.target.innerText.toLowerCase())
-//   }
-
-//   return (
-//     <div className='spanContainer'>
-//       <span onClick={changeBG}>Red</span>
-//       <span onClick={changeBG}>Yellow</span>
-//       <span onClick={changeBG}>Purple</span>
-//       <span onClick={changeBG}>Green</span>
-//       <span onClick={changeBG}>Blue</span>
-//       <span onClick={changeBG}>Orange</span>
-//     </div>
-//   )
-// }
-
-// export default App
