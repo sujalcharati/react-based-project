@@ -35,21 +35,20 @@ function Buttoncomponents(){
   const blackcolor = ()=>{
     setColor(color ==='black'?'white':'black');
    }
-  const defaultcolor = ()=>{
-    setColor(color ==='white'?'white':'white');
-   }
+  
   return(
     <div>
-      <div style={{backgroundColor: color, height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '10px 20px', fontSize: '16px', borderRadius:'9px'}}>
+      <h1 style={{ backgroundColor: color,fontFamily:'sans-serif', fontWeight:'bold', fontSize:'50px',display: 'flex', justifyContent: 'center'}}>Background changer</h1>
+      <div style={{backgroundColor: color, height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '16px'}}>
         
 
-        <button onClick={redcolor} style={{background: 'red', paddingRight: '9px', margin: '0 5px',}}>Red</button>
-        <button onClick={yellowcolor} style={{background: 'yellow', margin: '0 5px'}}>Yellow</button>
-        <button onClick={bluecolor} style={{background: 'blue', margin: '0 15px'}}>Blue</button>
-        <button onClick={pinkcolor} style={{background: 'pink', margin: '0 5px'}}>Pink</button>
-        <button onClick={greencolor} style={{background: 'green', margin: '0 5px'}}>Green</button>
-        <button onClick={blackcolor} style={{background: 'black', color: 'white', margin: '0 5px'}}>Black</button>
-        <button onClick={defaultcolor} style={{background: 'default', margin: '0 5px'}}>Default</button>
+        <button onClick={redcolor} style={{background: 'red', paddingRight: '19px', margin: '0 15px',borderRadius:'9px',height:'40px'}}>Red</button>
+        <button onClick={yellowcolor} style={{background: 'yellow', margin: '0 15px',borderRadius:'9px',height:'40px'}}>Yellow</button>
+        <button onClick={bluecolor} style={{background: 'blue', margin: '0 15px',borderRadius:'9px',height:'40px'}}>Blue</button>
+        <button onClick={pinkcolor} style={{background: 'pink', margin: '0 15px',borderRadius:'9px',height:'40px'}}>Pink</button>
+        <button onClick={greencolor} style={{background: 'green', margin: '0 15px',borderRadius:'9px',height:'40px'}}>Green</button>
+        <button onClick={blackcolor} style={{background: 'black', color: 'white', margin: '0 15px',borderRadius:'9px',height:'40px'}}>Black</button>
+       
       </div>
     </div>
   )
