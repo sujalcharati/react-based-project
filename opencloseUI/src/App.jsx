@@ -19,7 +19,7 @@ function Accordian({title,section}){
   const [isopen, setIsopen] = useState(false);
   const  toggleeffect =()=>{
     
-        setIsopen(isopen==='true'?'opened':'closed');
+        setIsopen();
   }
       return (
         <div>
@@ -32,9 +32,9 @@ function Accordian({title,section}){
             justifyContent: 'space-evenly',
            
           }}>
-            <div style={{ marginBottom: '10px', backgroundColor: '#7cd9d5',height:'55px',}}>
+            <div  style={{ marginBottom: '10px', backgroundColor: '#7cd9d5',height:'55px',}}>
               {title}
-              <span onClick={ toggleeffect} style={{ color:'brown'}}>+</span>
+              <span style={{ color:'brown'}}>+</span>
               { 
                 (
                   <div>
