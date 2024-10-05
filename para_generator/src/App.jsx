@@ -5,36 +5,30 @@ import './App.css'
 function App() {
 
   return (
-   
-      <div>
-            <Generator/>
-       </div>
-    
-   
+  <div>
+    <Generator/>
+  </div>
   )
 }
 
 function Generator(){
   const [inputvalue,setInputvalue]=useState();
  
-  const [para,setPara] =useState("");
+  const [para,setPara] =useState(" ");
   
-  useEffect(()=>{
+    
     const arr = ['teckstack','portfolifo','groups','hackathons'];
-      const generateText= ()=>{
+    function generateText(){
 
        let newparagraph='';
        for(let i=0;i<inputvalue;i++){
         let noofwords= Math.floor(Math.random()*arr);
-        newparagraph+= arr[noofwords]+''
+        newparagraph+= arr[noofwords]+'';
        }
-      setPara(newparagraph.trim());
+      setPara(newparagraph);
     }
-    generateText();
-  },[inputvalue]);
-    
   
-  return(
+     return(
     <div>
       <h1> Para Generator</h1>
       <input
@@ -44,10 +38,11 @@ function Generator(){
       onChange={ (e)=> setInputvalue(e.target.value)}
       />
       <button onClick={generateText}>Generate</button>
-      <div>
+      <p>
+
         {para} 
+      </p>
       </div>
-    </div>
   )
 }
 
