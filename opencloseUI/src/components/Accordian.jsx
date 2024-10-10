@@ -4,7 +4,7 @@ export default function Accordian() {
   const [selected, setSelected] = useState(null);
 
   function singlefeature(currentid){
-       setSelected(currentid);
+       setSelected(currentid===selected? null: currentid);
   }
 
   return (
