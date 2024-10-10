@@ -3,8 +3,8 @@ import data from "./data";
 export default function Accordian() {
   const [selected, setSelected] = useState(null);
 
-  function singlefeature(currentid){
-       setSelected(currentid===selected? null: currentid);
+  function singlefeature(currentid) {
+    setSelected(currentid === selected ? null : currentid);
   }
 
   return (
@@ -13,16 +13,14 @@ export default function Accordian() {
         {data.length > 0 ? (
           data.map((dataitem) => (
             <div>
-              <div className="title" onClick={()=>singlefeature(dataitem.id)}>
+              <div className="title" onClick={() => singlefeature(dataitem.id)}>
                 <h3>{dataitem.title}</h3>
                 <span>+</span>
-                {
-                    selected===dataitem.id? 
-                    <div className="content">
-                       {dataitem.content}
-                        </div>:
-                         <div>null</div>
-                }
+                {selected === dataitem.id ? (
+                  <div className="content">{dataitem.content}</div>
+                ) : (
+                  <div></div>
+                )}
               </div>
             </div>
           ))
