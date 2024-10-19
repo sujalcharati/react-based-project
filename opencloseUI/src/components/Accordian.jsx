@@ -14,8 +14,10 @@ export default function Accordian() {
           data.map((dataitem) => (
             <div>
               <div className="title" onClick={() => singlefeature(dataitem.id)}>
-                <h3>{dataitem.title}</h3>
-                <span>+</span>
+                
+                <h3>{dataitem.title} <span>+</span></h3>
+                
+                
                 {selected === dataitem.id ? (
                   <div className="content">{dataitem.content}</div>
                 ) : (
