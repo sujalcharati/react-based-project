@@ -1,4 +1,5 @@
 import { ToggleDemo } from './demos/ToggleDemo'
+import { PreviousDemo } from './demos/PreviousDemo'
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
         light up as you finish each one. Work top-to-bottom (easy → hard).
       </p>
       <ToggleDemo />
+      <PreviousDemo />
     </div>
   )
 }
