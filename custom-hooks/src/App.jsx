@@ -1,6 +1,7 @@
 import { ToggleDemo } from './demos/ToggleDemo'
 import { PreviousDemo } from './demos/PreviousDemo'
 import { LocalStorageDemo } from './demos/LocalStorageDemo'
+import { DebounceDemo } from './demos/DebounceDemo'
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <ToggleDemo />
       <PreviousDemo />
       <LocalStorageDemo />
+      <DebounceDemo />
     </div>
   )
 }
